@@ -1,0 +1,30 @@
+/* stage.css
+*/
+
+/* Stage formatting */
+.stage-partition {
+  float: left;
+  width: 62.5%;
+  height: 100%;
+}
+.stage {
+  width: 94%;
+  height: 100%;
+  padding: 0 3%;
+  overflow: auto;
+}
+section {
+  min-height: 100%;
+}
+.scene-container {
+  padding-top: 4em;
+}
+
+/* Individual scene formatting */
+.about {
+  width: 75%;
+}
+
+.resume {
+  width: 80%;
+}

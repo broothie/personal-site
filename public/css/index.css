@@ -1,0 +1,64 @@
+/* index.css
+*/
+
+/* Font face */
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../fonts/SourceCodePro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-weight: bold;
+  src: url("../fonts/SourceCodePro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-style: italic;
+  src: url("../fonts/SourceCodePro-It.otf") format("opentype");
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/SourceCodePro-BoldIt.otf") format("opentype");
+}
+
+/* General */
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  font-family: "SourceCodePro", "Courier New", Courier, monospace;
+  color: #33333d;
+}
+
+.theater {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+/* Link formatting */
+a {
+  color: #33333d;
+}
+a:hover {
+  font-style: italic;
+}
+a:active {
+  font-style: italic;
+  font-weight: bold;
+}
+.clickable {
+  color: #33333d;
+}
+.clickable:link {
+  text-decoration: none;
+}
+
+li {
+  list-style: square;
+}

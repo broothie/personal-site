@@ -1,0 +1,57 @@
+//- index.jade
+//-
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    
+    // CSS
+    link(rel="stylesheet", href="css/index.css")
+    link(rel="stylesheet", href="css/playbill.css")
+    link(rel="stylesheet", href="css/stage.css")
+    
+    // JS
+    script(src="js/index.js", defer)
+    
+    // Page
+    link(rel="shortcut icon", href="img/favicon.jpg")
+    title The Website of ADB
+
+  body
+    .theater
+      .playbill-partition
+        .playbill-container
+          .playbill
+            img.mugshot(src="img/Chimney_mugshot.jpg", alt="Mugshot of Andrew Booth")
+            a.clickable(href="#Home")
+              h1.nameplate Andrew Booth
+
+            ul.menu
+              li
+                a.clickable(href="#Home")
+                  .menu-item
+                    h3.menu-text(name="Home") Home
+              li
+                a.clickable(href="#Projects")
+                  .menu-item
+                    h3.menu-text(name="Projects") Projects
+              li
+                a.clickable(href="#Resume")
+                  .menu-item
+                    h3.menu-text(name="Resume") Résumé
+
+      .stage-partition
+        .stage
+          section#Home
+            .scene-container
+              .scene
+                .about!= content.about.markup
+          section#Projects
+            .scene-container
+              .scene
+                h3 Projects
+          section#Resume
+            .scene-container
+              .scene
+                a(href="/assets/resume.pdf")
+                  img.resume(src="img/resume.png", alt="Current resume")

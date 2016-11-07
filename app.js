@@ -9,7 +9,7 @@ app.use(express.static('public'));
 app.set('view engine', 'jade');
 
 app.get('/', (req, res) => {
-  let content = {
+  var content = {
     about: {
       markup: marked(fs.readFileSync('public/data/about.md', 'utf8'))
     },
@@ -18,9 +18,9 @@ app.get('/', (req, res) => {
   };
 
   const postdates = JSON.parse(fs.readFileSync('public/data/posts.json', 'utf8'));
-  for(let counter = 0; counter < postdates.length; counter++){
+  for(var counter = 0; counter < postdates.length; counter++){
     const postdate = postdates[counter];
-    let path = 'public/data/posts/' + postdate + '.md';
+    var path = 'public/data/posts/' + postdate + '.md';
     content.posts.push({
       date: postdate,
       markup: marked(fs.readFileSync(path, 'utf8'))

@@ -9,9 +9,8 @@ function update_menu(menu_item_name){
   for(var counter = menu_items.length - 1; counter >= 0; counter--){
     var menu_item = menu_items[counter];
     menu_item.className = 'menu-text';
-    menu_item_names.push(menu_item.getAttribute('name'));
   }
-  if(menu_item_names.indexOf(menu_item_name) == -1){
+  if(menu_item_name.length === 0){
     menu_item_name = 'Home';
   }
   // Apply selection styling to selected menu item
@@ -29,16 +28,34 @@ function update_page(){
   update_menu(unhashed_anchor);
 }
 
-// Add event listeners
+// Add event listener
 window.onhashchange = update_page;
+
+var mugshot_index = 0;
+var mugshots = [
+  'img/Chimney_mugshot.jpg',
+  'img/Killington_mugshot.jpg',
+  'img/Niagara_mugshot.jpg',
+  'img/Oozefest_mugshot.jpg',
+];
+
+function increment_mug(){
+  mugshot_index++;
+  var mugshot = document.getElementsByClassName('mugshot')[0];
+  mugshot.src = mugshots[mugshot_index % mugshots.length];
+}
 
 // When page loads
 window.onload = function(){
+  // Randomize mugshot
+  mugshot_index = Math.floor(Math.random() * 2);
+  var mugshot = document.getElementsByClassName('mugshot')[0];
+  mugshot.src = mugshots[mugshot_index];
+
   // Build scrollspy
   var stage = document.getElementsByClassName('stage')[0];
   stage.addEventListener('scroll', function(){
     // Get the mugshot top
-    var mugshot = document.getElementsByClassName('mugshot')[0];
     var mugshot_top = mugshot.getBoundingClientRect().top;
 
     // Loop through sections and test relation to mugshot
@@ -56,5 +73,6 @@ window.onload = function(){
       }
     }
   });
+  // Update page
   update_page();
 };

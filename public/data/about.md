@@ -2,7 +2,7 @@
 
 Twenty-three year old starting up a position as a computer engineer at [BAE Systems](http://www.baesystems.com/) in Endicott, NY. Fresh off finishing up a bachelor's degree in [Computer Engineering](http://www.cse.buffalo.edu/) at [SUNY Buffalo](http://www.buffalo.edu/).
 
-I spend my days kayaking the mighty [Chemung](https://en.wikipedia.org/wiki/Chemung_River), skiing [K1](http://www.killington.com/site/index.html) & [QKA](http://www.keukalake.com/), and biking along the [Erie Canal](https://www.canalsidebuffalo.com).
+I spend my days kayaking the mighty [Chemung](https://en.wikipedia.org/wiki/Chemung_River), skiing [K1](http://www.killington.com/) & [QKA](http://www.keukalake.com/), and biking along the [Susquehanna](http://www.dec.ny.gov/outdoor/42299.html).
 
 ### Contact
 

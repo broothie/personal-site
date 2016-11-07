@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    
+    // CSS
+    link(rel="stylesheet", href="css/fonts.css")
+    link(rel="stylesheet", href="css/clock.css")
+    
+    // JS
+    script(src="//cdn.rawgit.com/processing-js/processing-js/v1.4.8/processing.min.js", defer)
+    
+    // Page
+    link(rel="shortcut icon", href="img/favicon.jpg")
+    title Planet System Clock
+    
+  body
+    a(href="https://github.com/boothandrewd/Planet_System_Clock")
+      h2.text Planet System Clock
+    a(href="https://processing.org/")
+      p.text Built with Processing
+    a(href="http://processingjs.org/")
+      p.text Presented with ProcessingJS
+    a(href="/")
+      p.text By Andrew Booth
+    canvas(data-processing-sources="pde/Andrew_Booth_Midterm_Assign_vA.pde pde/class_Planet.pde")

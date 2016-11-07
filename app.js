@@ -13,14 +13,25 @@ app.get('/', (req, res) => {
     about: {
       markup: marked(fs.readFileSync('public/data/about.md', 'utf8'))
     },
-    projects: [
-      {
-        name: 'Scrumtious',
-        link: 'https://scrumtio.us',
-      }
-    ]
+    projects: JSON.parse(fs.readFileSync('public/data/projects.json', 'utf8')),
+    posts: []
   };
+
+  const postdates = JSON.parse(fs.readFileSync('public/data/posts.json', 'utf8'));
+  for(let counter = 0; counter < postdates.length; counter++){
+    const postdate = postdates[counter];
+    let path = 'public/data/posts/' + postdate + '.md';
+    content.posts.push({
+      date: postdate,
+      markup: marked(fs.readFileSync(path, 'utf8'))
+    });
+  }
+
   res.render('index', {content});
+});
+
+app.get('/planet-clock', (req, res) => {
+  res.render('clock');
 });
 
 app.listen(process.env.PORT || 5000);

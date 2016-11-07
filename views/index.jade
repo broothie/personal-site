@@ -6,23 +6,31 @@ html(lang='en')
     meta(charset='utf-8')
     
     // CSS
+    // For code highlighting
+    link(rel="stylesheet", href="css/docco.css")
+    // Custom
+    link(rel="stylesheet", href="css/fonts.css")
     link(rel="stylesheet", href="css/index.css")
     link(rel="stylesheet", href="css/playbill.css")
     link(rel="stylesheet", href="css/stage.css")
     
     // JS
+    // For code highlighting
+    script(src="js/highlight.pack.js")
+    script hljs.initHighlightingOnLoad();      
+    // Custom
     script(src="js/index.js", defer)
     
     // Page
     link(rel="shortcut icon", href="img/favicon.jpg")
     title The Website of ADB
 
-  body
+  body(onunload="")
     .theater
       .playbill-partition
         .playbill-container
           .playbill
-            img.mugshot(src="img/Chimney_mugshot.jpg", alt="Mugshot of Andrew Booth")
+            img.mugshot(src="img/Chimney_mugshot.jpg", alt="Mugshot of Andrew Booth", onclick="increment_mug()")
             a.clickable(href="#Home")
               h1.nameplate Andrew Booth
 
@@ -39,6 +47,10 @@ html(lang='en')
                 a.clickable(href="#Resume")
                   .menu-item
                     h3.menu-text(name="Resume") Résumé
+              li
+                a.clickable(href="#Blog")
+                  .menu-item
+                    h3.menu-text(name="Blog") Blog
 
       .stage-partition
         .stage
@@ -46,12 +58,32 @@ html(lang='en')
             .scene-container
               .scene
                 .about!= content.about.markup
+                
           section#Projects
             .scene-container
               .scene
-                h3 Projects
+                table.table-flush
+                  tbody
+                    each project, counter in content.projects
+                      if counter % 3 == 0
+                        if counter != 0
+                          </tr>
+                        if counter != content.projects.length-1
+                          <tr>
+                      td.project-cell
+                        a(href=project.link)
+                          img.project-img(src=project.thumb, alt=project.name)
+                        
           section#Resume
             .scene-container
               .scene
                 a(href="/assets/resume.pdf")
                   img.resume(src="img/resume.png", alt="Current resume")
+          
+          section#Blog
+            .scene-container
+              .scene
+                for post in content.posts
+                  .post(id=post.date)!= post.markup
+                    p.post-anchor
+                      a(href="#" + post.date)= post.date

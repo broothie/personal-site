@@ -40,10 +40,10 @@ section {
 }
 .project-img {
   width: 200px;
-  border: 1px solid gray;
+  filter: grayscale(75%);
 }
 .project-img:hover {
-  box-shadow: 0px 0px 3px 1px gray;
+  filter: none;
 }
 
 /* Blog scene */

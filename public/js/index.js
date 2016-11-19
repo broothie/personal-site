@@ -47,11 +47,6 @@ function increment_mug(){
 
 // When page loads
 window.onload = function(){
-  // Randomize mugshot
-  mugshot_index = Math.floor(Math.random() * 2);
-  var mugshot = document.getElementsByClassName('mugshot')[0];
-  mugshot.src = mugshots[mugshot_index];
-
   // Build scrollspy
   var stage = document.getElementsByClassName('stage')[0];
   stage.addEventListener('scroll', function(){

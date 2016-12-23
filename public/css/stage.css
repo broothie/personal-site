@@ -40,19 +40,7 @@ section {
 }
 .project-img {
   width: 200px;
-  filter: grayscale(75%);
 }
 .project-img:hover {
-  filter: none;
-}
-
-/* Blog scene */
-.post {
-  width: 80%;
-  text-align: justify;
-}
-.post-anchor {
-  text-align: right;
-  font-size: 13px;
-  padding-bottom: 5px;
+  filter: contrast(90%);
 }

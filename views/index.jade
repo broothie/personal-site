@@ -6,19 +6,12 @@ html(lang='en')
     meta(charset='utf-8')
     
     // CSS
-    // For code highlighting
-    link(rel="stylesheet", href="//cdn.rawgit.com/isagalaev/highlight.js/master/src/styles/docco.css")
-    // Custom
     link(rel="stylesheet", href="css/fonts.css")
     link(rel="stylesheet", href="css/index.css")
     link(rel="stylesheet", href="css/playbill.css")
     link(rel="stylesheet", href="css/stage.css")
     
     // JS
-    // For code highlighting
-    script(src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js")
-    script hljs.initHighlightingOnLoad();
-    // Custom
     script(src="js/index.js", defer)
     
     // Page
@@ -40,26 +33,17 @@ html(lang='en')
                   .menu-item
                     h3.menu-text(name="Home") Home
               li
-                a.clickable(href="#Projects")
+                a.clickable(href="#About")
                   .menu-item
-                    h3.menu-text(name="Projects") Projects
+                    h3.menu-text(name="About") About
               li
                 a.clickable(href="#Resume")
                   .menu-item
                     h3.menu-text(name="Resume") Résumé
-              li
-                a.clickable(href="#Blog")
-                  .menu-item
-                    h3.menu-text(name="Blog") Blog
 
       .stage-partition
         .stage
           section#Home
-            .scene-container
-              .scene
-                .about!= content.about.markup
-                
-          section#Projects
             .scene-container
               .scene
                 table.table-flush
@@ -74,16 +58,13 @@ html(lang='en')
                         a(href=project.link)
                           img.project-img(src=project.thumb, alt=project.name)
                         
+          section#About
+            .scene-container
+              .scene
+                .about!= content.about.markup
+                                
           section#Resume
             .scene-container
               .scene
                 a(href="/assets/resume.pdf")
                   img.resume(src="img/resume.png", alt="Current resume")
-          
-          section#Blog
-            .scene-container
-              .scene
-                for post in content.posts
-                  .post(id=post.date)!= post.markup
-                    p.post-anchor
-                      a(href="#" + post.date)= post.date

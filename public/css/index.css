@@ -9,19 +9,14 @@ html, body {
 
   font-family: "SourceCodePro", "Courier New", Courier, monospace;
   color: #33333d;
+  background-color: #fcfcfc;
 }
 
-.theater {
-  margin: auto;
-  width: 100%;
-  height: 100%;
-
-  overflow: hidden;
-}
 
 /* Link formatting */
 a {
   color: #33333d;
+  cursor: pointer;
 }
 a:hover {
   font-style: italic;
@@ -39,4 +34,122 @@ a:active {
 
 li {
   list-style: square;
+}
+
+
+/* Nav stuff */
+/* Based on:
+http://stackoverflow.com/questions/59309/how-to-vertically-center-content-with-variable-height-within-a-div
+*/
+.nav {
+  height: 30%;
+  text-align: center;
+}
+
+.nav:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.nav-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 85%;
+  text-align: left;
+  padding-left: 6%;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.nav-item {
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+
+/* Main stuff */
+.theater {
+  width: 85%;
+  margin: auto;
+}
+
+.project-table {
+  width: 100%;
+}
+.project-table td {
+  width: 33.33%;
+  position: relative;
+}
+
+.project-cell {
+  padding: 0 10%;
+  text-align: center;
+}
+.project-img {
+  height: 100%;
+  width: 100%;
+}
+.project-img:hover {
+  filter: saturate(50%);
+}
+
+#about {
+  display: none;
+}
+.about-content {
+  margin: auto;
+  padding-left: 3.5%;
+}
+.about-img-container {
+  width: 30%;
+  float: left;
+  margin-right: 5%;
+}
+.about-img {
+  width: 100%;
+  height: 100%;
+}
+.about-text-container {
+  width: 65%;
+  overflow: hidden;
+}
+
+#resume {
+  display: none;
+}
+.resume-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Footer stuff */
+.footer {
+  margin-top: 50px;
+  height: 15%;
+  text-align: center;
+}
+
+.footer:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.footer-content {
+  padding-left: 6%;
+  display: inline-block;
+  vertical-align: middle;
+  width: 85%;
+  text-align: left;
 }

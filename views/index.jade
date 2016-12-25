@@ -6,65 +6,57 @@ html(lang='en')
     meta(charset='utf-8')
     
     // CSS
-    link(rel="stylesheet", href="css/fonts.css")
-    link(rel="stylesheet", href="css/index.css")
-    link(rel="stylesheet", href="css/playbill.css")
-    link(rel="stylesheet", href="css/stage.css")
+    link(rel='stylesheet', href='css/fonts.css')
+    link(rel='stylesheet', href='css/index.css')
     
     // JS
-    script(src="js/index.js", defer)
+    script(src='js/index.js', defer)
     
     // Page
-    link(rel="shortcut icon", href="img/favicon.jpg")
+    link(rel='shortcut icon', href='img/AB_logo.png')
     title The Website of ADB
 
-  body(onunload="")
+  body(onunload='')
+    .nav
+      .nav-content
+        <p class="header">
+        <a href="/" style="text-decoration:none;">
+        <img src="img/AB_logo.png" class="logo"/>
+        </a>
+        
+        <a href="javascript:change_scene('home');" class="clickable nav-item" target="home">HOME</a>
+        <a href="javascript:change_scene('about');" class="clickable nav-item" target="about">ABOUT</a>
+        <a href="javascript:change_scene('resume');" class="clickable nav-item" target="resume">RÉSUMÉ</a>
+        </p>
+    
     .theater
-      .playbill-partition
-        .playbill-container
-          .playbill
-            img.mugshot(src="img/Chimney_mugshot.jpg", alt="Mugshot of Andrew Booth", onclick="increment_mug()")
-            a.clickable(href="#Home")
-              h1.nameplate Andrew Booth
-
-            ul.menu
-              li
-                a.clickable(href="#Home")
-                  .menu-item
-                    h3.menu-text(name="Home") Home
-              li
-                a.clickable(href="#About")
-                  .menu-item
-                    h3.menu-text(name="About") About
-              li
-                a.clickable(href="#Resume")
-                  .menu-item
-                    h3.menu-text(name="Resume") Résumé
-
-      .stage-partition
-        .stage
-          section#Home
-            .scene-container
-              .scene
-                table.table-flush
-                  tbody
-                    each project, counter in content.projects
-                      if counter % 3 == 0
-                        if counter != 0
-                          </tr>
-                        if counter != content.projects.length-1
-                          <tr>
-                      td.project-cell
-                        a(href=project.link)
-                          img.project-img(src=project.thumb, alt=project.name)
-                        
-          section#About
-            .scene-container
-              .scene
-                .about!= content.about.markup
-                                
-          section#Resume
-            .scene-container
-              .scene
-                a(href="/assets/resume.pdf")
-                  img.resume(src="img/resume.png", alt="Current resume")
+      #home.scene
+        table.project-table
+          tbody
+            each project, counter in content.projects
+              if counter % 3 == 0
+                if counter != 0
+                  </tr>
+                if counter != content.projects.length-1
+                  </tr>
+              td
+                .project-cell
+                  a(href=project.link)
+                    img.project-img(src=project.thumb, alt=project.name)
+                  p
+                    a.clickable(href=project.link)= project.name
+      
+      #about.scene
+        .about-content
+          .about-img-container
+            img.about-img(src='img/Chimney_mugshot.jpg')
+          .about-text-container
+            p.about-text!= content.about.markup
+          
+      #resume.scene
+        a(href='assets/resume.pdf')
+          img.resume-img(src='img/resume.png')
+      
+    .footer
+      .footer-content
+        <p>Copyright 2016 Andrew Booth - Built with <a href="https://nodejs.org/">Node</a>/<a href="http://expressjs.com/">Express</a>/<a href="https://naltatis.github.io/jade-syntax-docs/">Jade</a><p>

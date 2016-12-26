@@ -2,26 +2,26 @@
   {
     "name": "Scrumtious",
     "link": "https://scrumtio.us/",
-    "thumb": "img/thumbs/scrumtious.png"
+    "thumb": "res/img/thumbs/scrumtious.png"
   },
   {
     "name": "Dews Pics",
     "link": "https://dewspics.com/",
-    "thumb": "img/thumbs/dewspics.png"
+    "thumb": "res/img/thumbs/dewspics.png"
   },
   {
     "name": "Planet Clock",
     "link": "/planet-clock",
-    "thumb": "img/thumbs/clock.jpg"
+    "thumb": "res/img/thumbs/clock.jpg"
   },
   {
     "name": "andrewdbooth.me",
     "link": "https://github.com/boothandrewd/personal-site",
-    "thumb": "img/AndrewBooth.jpg"
+    "thumb": "res/img/AndrewBooth.jpg"
   },
   {
     "name": "Chalet in the Woods",
     "link": "http://chaletinthewoods.net/",
-    "thumb": "img/thumbs/chalet.jpg"
+    "thumb": "res/img/thumbs/chalet.jpg"
   }
 ]

@@ -19,10 +19,6 @@ a {
   cursor: pointer;
 }
 a:hover {
-  font-style: italic;
-}
-a:active {
-  font-style: italic;
   font-weight: bold;
 }
 .clickable {
@@ -63,8 +59,8 @@ http://stackoverflow.com/questions/59309/how-to-vertically-center-content-with-v
 }
 
 .logo {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   vertical-align: middle;
   margin-right: 15px;
 }

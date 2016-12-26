@@ -13,7 +13,7 @@ html(lang='en')
     script(src='js/index.js', defer)
     
     // Page
-    link(rel='shortcut icon', href='img/AB_logo.png')
+    link(rel='shortcut icon', href='res/img/AB_logo.png')
     title The Website of ADB
 
   body(onunload='')
@@ -21,12 +21,12 @@ html(lang='en')
       .nav-content
         <p class="header">
         <a href="/" style="text-decoration:none;">
-        <img src="img/AB_logo.png" class="logo"/>
+        <img src="res/img/AB_logo.png" class="logo"/>
         </a>
         
         <a href="javascript:change_scene('home');" class="clickable nav-item">HOME</a>
         <a href="javascript:change_scene('about');" class="clickable nav-item">ABOUT</a>
-        <a href="assets/resume.pdf" class="clickable nav-item">RÉSUMÉ</a>
+        <a href="res/resume.pdf" class="clickable nav-item">RÉSUMÉ</a>
         </p>
     
     .theater
@@ -49,10 +49,10 @@ html(lang='en')
       #about.scene
         .about-content
           .about-img-container
-            img.about-img(src='img/Chimney_mugshot.jpg')
+            img.about-img(src='res/img/Chimney_mugshot.jpg')
           .about-text-container
             p.about-text!= content.about.markup
           
     .footer
       .footer-content
-        <p>Copyright 2016 Andrew Booth - Built with <a href="https://nodejs.org/">Node</a>/<a href="http://expressjs.com/">Express</a>/<a href="https://naltatis.github.io/jade-syntax-docs/">Jade</a><p>
+        <p>Designed by Andrew Booth - Powered by <a href="https://www.heroku.com/home">Heroku</a>/<a href="https://nodejs.org/">Node</a>/<a href="http://expressjs.com/">Express</a>/<a href="https://naltatis.github.io/jade-syntax-docs/">Jade</a><p>

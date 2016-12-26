@@ -24,9 +24,9 @@ html(lang='en')
         <img src="img/AB_logo.png" class="logo"/>
         </a>
         
-        <a href="javascript:change_scene('home');" class="clickable nav-item" target="home">HOME</a>
-        <a href="javascript:change_scene('about');" class="clickable nav-item" target="about">ABOUT</a>
-        <a href="javascript:change_scene('resume');" class="clickable nav-item" target="resume">RÉSUMÉ</a>
+        <a href="javascript:change_scene('home');" class="clickable nav-item">HOME</a>
+        <a href="javascript:change_scene('about');" class="clickable nav-item">ABOUT</a>
+        <a href="assets/resume.pdf" class="clickable nav-item">RÉSUMÉ</a>
         </p>
     
     .theater
@@ -53,10 +53,6 @@ html(lang='en')
           .about-text-container
             p.about-text!= content.about.markup
           
-      #resume.scene
-        a(href='assets/resume.pdf')
-          img.resume-img(src='img/resume.png')
-      
     .footer
       .footer-content
         <p>Copyright 2016 Andrew Booth - Built with <a href="https://nodejs.org/">Node</a>/<a href="http://expressjs.com/">Express</a>/<a href="https://naltatis.github.io/jade-syntax-docs/">Jade</a><p>

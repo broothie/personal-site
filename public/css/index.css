@@ -94,7 +94,10 @@ http://stackoverflow.com/questions/59309/how-to-vertically-center-content-with-v
   width: 100%;
 }
 .project-img:hover {
-  filter: saturate(50%);
+  filter: saturate(95%);
+  box-shadow: 0px 2px 10px 0px gray;
+  transform: scale(1.015);
+  transition: all .09s;
 }
 
 #about {

@@ -5,19 +5,24 @@
     "thumb": "res/img/thumbs/scrumtious.png"
   },
   {
-    "name": "Dews Pics",
+    "name": "andrewdbooth.me",
+    "link": "https://github.com/boothandrewd/personal-site",
+    "thumb": "res/img/AndrewBooth.jpg"
+  },
+  {
+    "name": "Student Scanner",
+    "link": "https://github.com/boothandrewd/Commencement-Scanner",
+    "thumb": "res/img/thumbs/commencement.jpg"
+  },
+  {
+    "name": "Dew's Pics",
     "link": "https://dewspics.com/",
-    "thumb": "res/img/thumbs/dewspics.png"
+    "thumb": "res/img/thumbs/dewspics.jpg"
   },
   {
     "name": "Planet Clock",
     "link": "/planet-clock",
     "thumb": "res/img/thumbs/clock.jpg"
-  },
-  {
-    "name": "andrewdbooth.me",
-    "link": "https://github.com/boothandrewd/personal-site",
-    "thumb": "res/img/AndrewBooth.jpg"
   },
   {
     "name": "Chalet in the Woods",

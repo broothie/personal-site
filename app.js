@@ -14,18 +14,7 @@ app.get('/', (req, res) => {
       markup: marked(fs.readFileSync('public/res/data/about.md', 'utf8'))
     },
     projects: JSON.parse(fs.readFileSync('public/res/data/projects.json', 'utf8')),
-    posts: []
   };
-
-  const postdates = JSON.parse(fs.readFileSync('public/res/data/posts.json', 'utf8'));
-  for(var counter = 0; counter < postdates.length; counter++){
-    const postdate = postdates[counter];
-    var path = 'public/res/data/posts/' + postdate + '.md';
-    content.posts.push({
-      date: postdate,
-      markup: marked(fs.readFileSync(path, 'utf8'))
-    });
-  }
 
   res.render('index', {content});
 });

@@ -3,6 +3,7 @@
 doctype html
 html(lang='en')
   head
+    // Meta
     meta(charset='utf-8')
     
     // CSS
@@ -52,7 +53,7 @@ html(lang='en')
             img.about-img(src='res/img/Chimney_mugshot.jpg')
           .about-text-container
             p.about-text!= content.about.markup
-          
-    .footer
+
+  .footer
       .footer-content
         <p>Designed by Andrew Booth - Powered by <a href="https://www.heroku.com/home">Heroku</a>/<a href="https://nodejs.org/">Node</a>/<a href="http://expressjs.com/">Express</a>/<a href="https://naltatis.github.io/jade-syntax-docs/">Jade</a><p>

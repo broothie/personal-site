@@ -1,5 +1,10 @@
 [
   {
+    "name": "DWUnique",
+    "link": "http://dwunique.com/",
+    "thumb": "http://dwunique.com/static/img/favicon.png"
+  },
+  {
     "name": "Scrumtious",
     "link": "https://scrumtio.us/",
     "thumb": "res/img/thumbs/scrumtious.png"
